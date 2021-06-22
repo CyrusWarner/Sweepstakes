@@ -4,7 +4,7 @@ from sweepstakes import Sweepstakes
 class MarketingFirm:
     def __init__(self):
         self.name = "Dynamic"
-        self.sweepstakes_storage = ()
+        self.sweepstakes_storage = ("Scholarship", "Lottery", "Weekly Sweepstake", "Yearly sweepstake")
 
     def create_sweepstakes(self):
         pass
@@ -15,4 +15,7 @@ class MarketingFirm:
     def select_sweepstakes(self):
         pass
     def menu(self):
-        pass
+        index = 0
+        for each in self.sweepstakes_storage:
+            print(f"{index}\t{each}")
+            index += 1
