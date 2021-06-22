@@ -1,14 +1,13 @@
-from contestant import Contestant
+import random
 
 class Sweepstakes:
     def __init__(self):
         self.name = ""
-        self.contestants ={
-
+        self.contestants = {
         }
 
     def register_contestant(self, contestant):
-        pass
+        contestant.registration_number = random.randint(1, 10)
 
     def menu(self):
         pass

@@ -4,7 +4,8 @@ def get_user_input_string(prompt):
     return user_input
 
 def get_user_input_number(prompt):
-    pass
+   user_input_number = int(input(prompt))
+   return user_input_number
 
 def display_contestant_info(contestant):
     pass
