@@ -3,7 +3,7 @@ from sweepstakes import Sweepstakes
 
 class MarketingFirm:
     def __init__(self):
-        self.name = ""
+        self.name = "Dynamic"
         self.sweepstakes_storage = ()
 
     def create_sweepstakes(self):
