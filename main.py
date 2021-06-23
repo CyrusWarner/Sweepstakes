@@ -13,6 +13,10 @@ contestant_four = Contestant("Bill", "Nye", "BillNye1579@yahoo.com", 4)
 contestant_five = Contestant("Riana", "Bratton", "RianaBratton2001@gmail.com", 5)
 contestant_six = Contestant("Illia", "Carter", "IlliaCarter1101@yahoo.com", 6)
 
+
+
+
+"""
 # Contestants receiving a registration number
 sweepstakes = Sweepstakes()
 
@@ -29,5 +33,5 @@ sweepstakes.register_contestant(contestant_six)
 run_sweepstakes = run_Sweepstakes()
 run_sweepstakes.run_simulation()
 
-
+"""
 

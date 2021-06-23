@@ -31,7 +31,7 @@ class User_Interface:
     @staticmethod
     def display_sweepstakes(sweepstakes):
         print("Displaying all sweepstakes.\n")
-        index = 0
+        index = 1
         for each in sweepstakes:
             print(f"{index}) {each}")
             index += 1
@@ -40,13 +40,13 @@ class User_Interface:
     @staticmethod       
     def display_sweepstakes_info(sweepstakes_name):
         if sweepstakes_name == "Unity Scholarship":
-            print("College scholarship worth $10,000")
+            print("\t College scholarship worth $10,000")
         if sweepstakes_name == "Lottery":
-            print("Randomly drawn registration number if you win you win 500 million dollars!")
+            print("\t Randomly drawn registration number if you win you win 500 million dollars!")
         if sweepstakes_name == "Weekly Sweepstake":
-            print("Weekly sweepstake which randomly draws a registration number, winner wins 1000 dollars!")
+            print("\t Weekly sweepstake which randomly draws a registration number, winner wins 1000 dollars!")
         if sweepstakes_name == "Yearly Sweepstake":
-            print("Yearly sweepstake which randomly draws a registration number, winner wins 100000 dollars!")
+            print("\t Yearly sweepstake which randomly draws a registration number, winner wins 100000 dollars!")
 
     @staticmethod #Come back to and make work with integers and not strings
     def sweepstakes_selection_menu(all_sweepstakes):
@@ -70,7 +70,7 @@ class User_Interface:
     def display_sweepstakes_menu_options(sweepstakes_name):
         print(f"1) \t Would you like to view all contestants?")
         print(f"2) \t Would you like to register a new contestant?")
-        print(f"3) \t Winner of {sweepstakes_name}!")
+        print(f"3) \t Determine winner of {sweepstakes_name}!")
         print(f"4) \t Would you like to exit the sweepstakes menu?")
         
     @staticmethod
