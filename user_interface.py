@@ -3,10 +3,10 @@ class User_Interface:
 
     @staticmethod
     def main_menu():
-        print(f"0) \t Would you like to see all sweepstakes.")
-        print(f"1) \t Would you like to access marketing firm menu? Requires password.")
-        print(f"2) \t Would you like to access the sweepstakes menu?")
-        print(f"3) \t Would you like to exit the menu.")
+        print(f"1) \t Would you like to see all sweepstakes.")
+        print(f"2) \t Would you like to access marketing firm menu?")
+        print(f"3) \t Would you like to access the sweepstakes menu?")
+        print(f"4) \t Would you like to exit the menu.")
 
         
     @staticmethod
@@ -61,17 +61,17 @@ class User_Interface:
     @staticmethod
     def display_marketing_firm_menu_options(marketing_firm_name):
         print("\nYou are now accessing the Marketing firm menu.\n")
-        print(f"0) \t Would you like to access the sweepstake selection menu?")
-        print(f"1) \t Would you like to create a new sweepstakes?")
-        print(f"2) \t Would you like to change the marketing firm name from {marketing_firm_name}?")
-        print(f"3) \t Would you like to exit the marketing firm menu?")
+        print(f"1) \t Would you like to access the sweepstake selection menu?")
+        print(f"2) \t Would you like to create a new sweepstakes?")
+        print(f"3) \t Would you like to change the marketing firm name from {marketing_firm_name}?")
+        print(f"4) \t Would you like to exit the marketing firm menu?")
 
     @staticmethod
     def display_sweepstakes_menu_options(sweepstakes_name):
-        print(f"0) \t Would you like to view all contestants?")
-        print(f"1) \t Would you like to register a new contestant?")
-        print(f"2) \t Winner of {sweepstakes_name}!")
-        print(f"3) \t Would you like to exit the sweepstakes menu?")
+        print(f"1) \t Would you like to view all contestants?")
+        print(f"2) \t Would you like to register a new contestant?")
+        print(f"3) \t Winner of {sweepstakes_name}!")
+        print(f"4) \t Would you like to exit the sweepstakes menu?")
         
     @staticmethod
     def exit_menu():

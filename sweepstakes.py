@@ -17,15 +17,15 @@ class Sweepstakes:
         sweepstake_name = User_Interface.sweepstakes_selection_menu(marketing_firm.sweepstakes_storage)
         User_Interface.display_sweepstakes_menu_options(sweepstake_name)
         choose_option_sweepstake = User_Interface.get_user_input_number("Please seleect an option from the menu")
-        if choose_option_sweepstake == 0:
-            User_Interface.display_contestants(self.contestants)
         if choose_option_sweepstake == 1:
+            User_Interface.display_contestants(self.contestants)
+        if choose_option_sweepstake == 2:
             contestant = Contestant.user()
             self.register_contestant(contestant)
             return new_contestant
-        if choose_option_sweepstake == 2:
-            pass
         if choose_option_sweepstake == 3:
+            pass
+        if choose_option_sweepstake == 4:
             User_Interface.exit_menu()
 
 

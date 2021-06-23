@@ -7,11 +7,10 @@ class Contestant:
         self.last_name = last_name
         self.email = email
         self.registration_number = registration_number
-
         
     def notify(self, winner):
         pass
-
+  
 """
     def new_user(self):
         self.first_name = get_user_input_string("Please enter your first name.")

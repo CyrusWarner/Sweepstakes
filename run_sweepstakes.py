@@ -10,22 +10,16 @@ class run_Sweepstakes:
     
     def run_simulation(self):
         User_Interface.main_menu()
-        user_number_input = User_Interface.get_user_input_number("Please choose from the menu")
-        if user_number_input == 0:
+        user_number_input = User_Interface.get_user_input_number("\t Please choose from the menu")
+        if user_number_input == 1:
             marketing_firm = MarketingFirm()
             marketing_firm.view_sweepstakes()
-        if user_number_input == 1:
-            password = True
-            while password:
-                user_input_password = User_Interface.get_user_input_string("\nPlease enter the password")
-                if user_input_password == "password":
-                    marketing_firm = MarketingFirm()
-                    marketing_firm.menu()
-                else:
-                    password = False
         if user_number_input == 2:
+            marketing_firm = MarketingFirm()
+            marketing_firm.menu()
+        if user_number_input == 3:
             sweepstakes = Sweepstakes()
             sweepstakes.menu()
-        if user_number_input == 3:
+        if user_number_input == 4:
             User_Interface.exit_menu()
 

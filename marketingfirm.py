@@ -29,15 +29,15 @@ class MarketingFirm:
     def menu(self):
         User_Interface.display_marketing_firm_menu_options(self.name)
         user_input = User_Interface.get_user_input_number("\nPlease Choose from the menu\n")
-        if user_input == 0:
+        if user_input == 1:
             User_Interface.display_sweepstakes(self.sweepstakes_storage)
             sweepstake_name = User_Interface.sweepstakes_selection_menu(self.sweepstakes_storage)
             self.sweepstakes_info(sweepstake_name)
-        if user_input == 1:
-            self.create_sweepstakes()
         if user_input == 2:
-            self.change_marketing_firm_name()
+            self.create_sweepstakes()
         if user_input == 3:
+            self.change_marketing_firm_name()
+        if user_input == 4:
             User_Interface.exit_menu()
 
     def view_sweepstakes(self):
