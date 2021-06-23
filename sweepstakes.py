@@ -14,7 +14,7 @@ class Sweepstakes:
         pass
 
     def view_contestants(self):
-        user_interface.display_contestants(self.contestants)
+        User_Interface.display_contestants(self.contestants)
 
     def pick_winner(self):
         pass
