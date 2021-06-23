@@ -36,6 +36,7 @@ class User_Interface:
             print(f"{index}) {each}")
             index += 1
             
+            
     @staticmethod       
     def display_sweepstakes_info(sweepstakes_name):
         if sweepstakes_name == "Unity Scholarship":
@@ -49,12 +50,11 @@ class User_Interface:
 
     @staticmethod #Come back to and make work with integers and not strings
     def sweepstakes_selection_menu(all_sweepstakes):
-        user_choose_sweepstake = User_Interface.get_user_input_number("\nPlease Select a sweepstake.")
+        user_choose_sweepstake = User_Interface.get_user_input_number("\nPlease Select a sweepstake.\n")
         index = -1
         for each in all_sweepstakes:
             index += 1
             if user_choose_sweepstake == index:
-                print(f"{each}\n")
                 return each
 
 

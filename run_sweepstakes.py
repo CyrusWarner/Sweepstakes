@@ -15,8 +15,14 @@ class run_Sweepstakes:
             marketing_firm = MarketingFirm()
             marketing_firm.view_sweepstakes()
         if user_number_input == 1:
-            marketing_firm = MarketingFirm()
-            marketing_firm.menu()
+            password = True
+            while password:
+                user_input_password = User_Interface.get_user_input_string("\nPlease enter the password")
+                if user_input_password == "password":
+                    marketing_firm = MarketingFirm()
+                    marketing_firm.menu()
+                else:
+                    password = False
         if user_number_input == 2:
             sweepstakes = Sweepstakes()
             sweepstakes.menu()

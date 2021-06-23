@@ -1,6 +1,7 @@
 from contestant import Contestant
 from sweepstakes import Sweepstakes
 from run_sweepstakes import run_Sweepstakes
+from user_interface import User_Interface
 
 # Contestants participating in sweepstakes
 
@@ -22,6 +23,8 @@ sweepstakes.register_contestant(contestant_three)
 sweepstakes.register_contestant(contestant_four)
 sweepstakes.register_contestant(contestant_five)
 sweepstakes.register_contestant(contestant_six)
+
+# User_Interface.display_contestants(sweepstakes.contestants)
 
 run_sweepstakes = run_Sweepstakes()
 run_sweepstakes.run_simulation()
