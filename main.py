@@ -13,7 +13,6 @@ contestant_five = Contestant("Riana", "Bratton", "RianaBratton2001@gmail.com", 5
 contestant_six = Contestant("Illia", "Carter", "IlliaCarter1101@yahoo.com", 6)
 
 # Contestants receiving a registration number
-
 sweepstakes = Sweepstakes()
 
 

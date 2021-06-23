@@ -13,10 +13,10 @@ class Contestant:
         pass
 
 """
-    def user(self):
+    def new_user(self):
         self.first_name = get_user_input_string("Please enter your first name.")
         self.last_name = get_user_input_string("Please enter your last name.")
         self.email = get_user_input_string("Please enter your email.")
-        self.registration_number = 7
+        self.registration_number = 7 #Try to find a way to add one to end of dictionary rgistration number
 
 """
