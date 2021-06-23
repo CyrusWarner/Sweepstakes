@@ -1,7 +1,6 @@
 from contestant import Contestant
 from sweepstakes import Sweepstakes
-
-
+from run_sweepstakes import run_Sweepstakes
 
 # Contestants participating in sweepstakes
 
@@ -25,10 +24,8 @@ sweepstakes.register_contestant(contestant_four)
 sweepstakes.register_contestant(contestant_five)
 sweepstakes.register_contestant(contestant_six)
 
-
-
-
-
+run_sweepstakes = run_Sweepstakes()
+run_sweepstakes.run_simulation()
 
 
 
