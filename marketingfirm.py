@@ -1,6 +1,7 @@
 from user_interface import User_Interface
 from sweepstakes import Sweepstakes
 
+
 class MarketingFirm:
     def __init__(self):
         self.name = "Dynamic"
@@ -10,12 +11,13 @@ class MarketingFirm:
         sweepstakes = Sweepstakes()
         sweepstakes.name = User_Interface.get_user_input_string("Please enter a name for the new sweepstakes")
         self.sweepstakes_storage.append(sweepstakes)
+
     def change_marketing_firm_name(self):
         new_firm_name = User_Interface.get_user_input_string("\nPlease enter the name for the new marketing firm.")
         self.name = new_firm_name
 
     def select_sweepstakes(self):
-        user_number = get_user_input_number("Please Choose a sweepstakes")
+        user_number = User_Interface.get_user_input_number("Please Choose a sweepstakes")
         index = 0
         for each in self.sweepstakes_storage:
             print(f"{index}\t{each}")

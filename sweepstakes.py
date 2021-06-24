@@ -2,6 +2,7 @@ from contestant import Contestant
 from user_interface import User_Interface
 import random
 
+
 class Sweepstakes:
     def __init__(self):
         self.name = ""

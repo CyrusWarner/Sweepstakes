@@ -1,13 +1,12 @@
 from user_interface import User_Interface
 from sweepstakes import Sweepstakes
-from contestant import Contestant
 from marketingfirm import MarketingFirm
+
 
 class run_Sweepstakes:
     def __init__(self):
         pass
-    
-    
+
     def run_simulation(self):
         marketing_firm = MarketingFirm()
         sweepstakes = Sweepstakes()

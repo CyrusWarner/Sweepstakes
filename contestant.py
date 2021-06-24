@@ -1,4 +1,3 @@
-from user_interface import User_Interface
 
 class Contestant:
     def __init__(self, first_name, last_name, email, contestant_dictionary):
