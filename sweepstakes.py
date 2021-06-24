@@ -1,19 +1,17 @@
 from contestant import Contestant
 from user_interface import User_Interface
-from marketingfirm import MarketingFirm
 
 class Sweepstakes:
     def __init__(self):
         self.name = ""
         self.contestants = {
         }
-        self.register_contestant()
 
     def register_contestant(self, contestant):
         self.contestants[contestant.registration_number] = contestant
 
+
     def menu(self):
-        marketing_firm = MarketingFirm()
         User_Interface.display_sweepstakes(marketing_firm.sweepstakes_storage)
         sweepstake_name = User_Interface.sweepstakes_selection_menu(marketing_firm.sweepstakes_storage)
         User_Interface.display_sweepstakes_menu_options(sweepstake_name)

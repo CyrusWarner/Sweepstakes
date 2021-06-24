@@ -1,15 +1,15 @@
-
 from user_interface import User_Interface
+from sweepstakes import Sweepstakes
 
 class MarketingFirm:
     def __init__(self):
         self.name = "Dynamic"
-        self.sweepstakes_storage = ["Unity Scholarship", "Lottery", "Weekly Sweepstake", "Yearly Sweepstake"]
+        self.sweepstakes_storage = []
 
     def create_sweepstakes(self):
-        new_sweepstakes = User_Interface.get_user_input_string("\nPlease enter the name for the new sweepstakes.")
-        self.sweepstakes_storage.append(new_sweepstakes)
-
+        sweepstakes = Sweepstakes()
+        sweepstakes.name = User_Interface.get_user_input_string("Please enter a name for the new sweepstakes")
+        self.sweepstakes_storage.append(sweepstakes)
     def change_marketing_firm_name(self):
         new_firm_name = User_Interface.get_user_input_string("\nPlease enter the name for the new marketing firm.")
         self.name = new_firm_name
