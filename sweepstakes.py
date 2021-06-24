@@ -10,7 +10,6 @@ class Sweepstakes:
     def register_contestant(self, contestant):
         self.contestants[contestant.registration_number] = contestant
 
-
     def menu(self, sweepstakes):
         User_Interface.display_sweepstakes(sweepstakes)
         sweepstake_object = User_Interface.sweepstakes_selection_menu(sweepstakes)
@@ -22,7 +21,7 @@ class Sweepstakes:
             get_user_first_name = User_Interface.get_user_input_string("enter your first name")
             get_user_last_name = User_Interface.get_user_input_string("enter your last name")
             get_user_email = User_Interface.get_user_input_string("enter your email")
-            new_contestant = Contestant(get_user_first_name, get_user_last_name, get_user_email, 1)
+            new_contestant = Contestant(get_user_first_name, get_user_last_name, get_user_email, self.contestants)
             self.register_contestant(new_contestant)
         if choose_option_sweepstake == 3:
             pass

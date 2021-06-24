@@ -35,8 +35,11 @@ class User_Interface:
 
     @staticmethod
     def display_contestants(contestant):
-        for key, value in contestant.items():
-            print(f"\t {value.first_name} {value.last_name}")
+        if contestant:
+            for key, value in contestant.items():
+                print(f"\t {value.first_name} {value.last_name}")
+        else:
+            print("No Contestants.")
 
     @staticmethod
     def display_contestant_info(contestant):

@@ -1,12 +1,18 @@
 from user_interface import User_Interface
-import random
 
 class Contestant:
-    def __init__(self, first_name, last_name, email, registration_number):
+    def __init__(self, first_name, last_name, email, contestant_dictionary):
         self.first_name = first_name
         self.last_name = last_name
         self.email = email
-        self.registration_number = registration_number
+        self.registration_number = 1 + len(contestant_dictionary)
         
     def notify(self, winner):
         pass
+    
+"""
+    def registration(self, contestant, contestant_dictionary):
+        contestant.registration_number += len(contestant_dictionary)
+        return contestant.registration_number
+        
+"""
