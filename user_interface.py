@@ -3,11 +3,25 @@ class User_Interface:
 
     @staticmethod
     def main_menu():
-        print(f"1) \t Would you like to see all sweepstakes.")
-        print(f"2) \t Would you like to access marketing firm menu?")
-        print(f"3) \t Would you like to access the sweepstakes menu?")
-        print(f"4) \t Would you like to exit the menu.")
+        validate_user_selection = (False, None)
+        while validate_user_selection[0] is False:
+            print(f"1) \t Would you like to see all sweepstakes.")
+            print(f"2) \t Would you like to access marketing firm menu?")
+            print(f"3) \t Would you like to access the sweepstakes menu?")
+            print(f"4) \t Would you like to exit the menu.")
+            user_input = User_Interface.get_user_input_number("\nPlease choose from the menu")
+            validate_user_selection = User_Interface.validate_main_menu(user_input)
+        return validate_user_selection[1]
 
+    @staticmethod
+    def validate_main_menu(user_input):
+        switcher = {
+            1: (True, 1),
+            2: (True, 2),
+            3: (True, 3),
+            4: (True, 4),
+        }
+        return switcher.get(user_input, (False, None))
         
     @staticmethod
     def get_user_input_string(prompt):
@@ -22,11 +36,11 @@ class User_Interface:
     @staticmethod
     def display_contestants(contestant):
         for key, value in contestant.items():
-            print(key, value)
+            print(f"\t {value.first_name} {value.last_name}")
 
     @staticmethod
     def display_contestant_info(contestant):
-        print(contestant)
+        print(f"{contestant.first_name} {contestant.last_name}\n")
 
     @staticmethod
     def display_sweepstakes(sweepstakes):
@@ -34,30 +48,20 @@ class User_Interface:
             print("Displaying all sweepstakes.\n")
             index = 1
             for each in sweepstakes:
-                print(f"{index}) {each}")
+                print(f"{index}) {each.name}")
                 index += 1
         else:
             print("\n\tNo sweepstakes currently\n")
 
-    @staticmethod       
-    def display_sweepstakes_info(sweepstakes_name):
-        if sweepstakes_name == "Unity Scholarship":
-            print(f"{sweepstakes_name}- College scholarship worth $10,000")
-        if sweepstakes_name == "Lottery":
-            print(f"{sweepstakes_name}-Randomly drawn registration number if you win you win 500 million dollars!")
-        if sweepstakes_name == "Weekly Sweepstake":
-            print(f"{sweepstakes_name}- Weekly sweepstake which randomly draws a registration number, winner wins 1000 dollars!")
-        if sweepstakes_name == "Yearly Sweepstake":
-            print(f"{sweepstakes_name}- Yearly sweepstake which randomly draws a registration number, winner wins 100000 dollars!")
-
-    @staticmethod #Come back to and make work with integers and not strings
+    @staticmethod
     def sweepstakes_selection_menu(all_sweepstakes):
-        user_choose_sweepstake = User_Interface.get_user_input_number("\nPlease Select a sweepstake.\n")
-        index = -1
-        for each in all_sweepstakes:
-            index += 1
-            if user_choose_sweepstake == index:
-                return each
+        if all_sweepstakes:
+            user_choose_sweepstake = User_Interface.get_user_input_number("\nPlease Select a sweepstake.\n")
+            index = -1
+            for each in all_sweepstakes:
+                index += 1
+                if user_choose_sweepstake == index:
+                    return each
 
 
     @staticmethod

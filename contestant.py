@@ -10,9 +10,3 @@ class Contestant:
         
     def notify(self, winner):
         pass
-
-    def new_user(self):
-        self.first_name = get_user_input_string("Please enter your first name.")
-        self.last_name = get_user_input_string("Please enter your last name.")
-        self.email = get_user_input_string("Please enter your email.")
-        self.registration_number = 7

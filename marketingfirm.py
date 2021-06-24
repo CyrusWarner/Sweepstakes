@@ -22,17 +22,13 @@ class MarketingFirm:
             index += 1
             if user_number == each:
                 return each
-            
-    def sweepstakes_info(self, sweepstakes_name):
-        User_Interface.display_sweepstakes_info(sweepstakes_name)
 
     def menu(self):
         User_Interface.display_marketing_firm_menu_options(self.name)
         user_input = User_Interface.get_user_input_number("\nPlease Choose from the menu\n")
         if user_input == 1:
             User_Interface.display_sweepstakes(self.sweepstakes_storage)
-            sweepstake_name = User_Interface.sweepstakes_selection_menu(self.sweepstakes_storage)
-            self.sweepstakes_info(sweepstake_name)
+            User_Interface.sweepstakes_selection_menu(self.sweepstakes_storage)
         if user_input == 2:
             self.create_sweepstakes()
         if user_input == 3:
