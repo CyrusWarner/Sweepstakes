@@ -1,5 +1,6 @@
 from contestant import Contestant
 from user_interface import User_Interface
+import random
 
 class Sweepstakes:
     def __init__(self):
@@ -24,7 +25,7 @@ class Sweepstakes:
             new_contestant = Contestant(get_user_first_name, get_user_last_name, get_user_email, self.contestants)
             self.register_contestant(new_contestant)
         if choose_option_sweepstake == 3:
-            pass
+            self.pick_winner()
         if choose_option_sweepstake == 4:
             User_Interface.exit_menu()
 
@@ -33,5 +34,8 @@ class Sweepstakes:
         User_Interface.display_contestants(self.contestants)
 
     def pick_winner(self):
-        pass
+        random_winner = random.choice(list(self.contestants))
+        for key, value in self.contestants.items():
+            if key == random_winner:
+                display_winner(value.first_name, value.last_name)
 

@@ -10,9 +10,3 @@ class Contestant:
     def notify(self, winner):
         pass
     
-"""
-    def registration(self, contestant, contestant_dictionary):
-        contestant.registration_number += len(contestant_dictionary)
-        return contestant.registration_number
-        
-"""

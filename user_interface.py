@@ -81,6 +81,10 @@ class User_Interface:
         print(f"2) \t Would you like to register a new contestant?")
         print(f"3) \t Determine winner of {sweepstakes_name}!")
         print(f"4) \t Would you like to exit the sweepstakes menu?")
+
+    @staticmethod
+    def display_winner(contestant_first_name, contestant_last_name):
+        print(f"\t The winner is {contestant_first_name} {contestant_last_name}!")
         
     @staticmethod
     def exit_menu():
