@@ -83,8 +83,14 @@ class User_Interface:
         print(f"4) \t Would you like to exit the sweepstakes menu?")
 
     @staticmethod
-    def display_winner(contestant_first_name, contestant_last_name):
-        print(f"\t The winner is {contestant_first_name} {contestant_last_name}!")
+    def display_winner(contestant):
+        print(f"\t {contestant.first_name} {contestant.last_name} has won the sweepstake!")
+        contestant.sweepstake_info = "You have won the sweepstakes"
+    @staticmethod
+    def display_loser(contestants):
+        for key, value in contestants.items():
+            if value.won_sweepstakes is False:
+                value.display_text_if_won_or_lost = "You have lost the sweepstake."
         
     @staticmethod
     def exit_menu():

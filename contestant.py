@@ -5,8 +5,6 @@ class Contestant:
         self.first_name = first_name
         self.last_name = last_name
         self.email = email
+        self.won_sweepstake = False
+        self.display_text_if_won_or_lost = ""
         self.registration_number = 1 + len(contestant_dictionary)
-        
-    def notify(self, winner):
-        pass
-    

@@ -37,5 +37,8 @@ class Sweepstakes:
         random_winner = random.choice(list(self.contestants))
         for key, value in self.contestants.items():
             if key == random_winner:
-                display_winner(value.first_name, value.last_name)
-
+                value.won_sweepstake = True
+                User_Interface.display_winner(value)
+                
+            if value.won_sweepstake is False:
+                User_Interface.display_loser(self.contestants)
